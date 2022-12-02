@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="loginroute.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c2fe7ccc23.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header>
+        <nav id="navbar">
+            <a href="">LOGO</a>
+            <ul class="navList" style="  margin-right: 700px;">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ForWorkers.html">For Workers</a></li>
+                <li><a href="ForBusiness.html">For Business</a></li>
+            </ul>
+            <ul class="navList">
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Signup.html">Sign up</a></li>
+            </ul>
+            <i class="fa-solid fa-sun dark-mode" onclick="darkMode()" id="dark-btn"></i>
+
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <div class="loginBox" style="height: 670px;">
+            <span class="loginText element-color" style="background-color: white;">Sign Up</span>
+            <div>
+                <i class="fa-solid fa-signature icon"></i>
+                <input id="name" type="text" placeholder="Name">
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-envelope icon"></i>
+                <input id="login" type="text" placeholder="Email">
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-key icon"></i>
+                <input id="password" type="password" placeholder="Password">
+                <i class="fa-sharp fa-solid fa-eye iconPassword" onclick="showPassword()" id="password-button"></i>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-key icon"></i>
+                <input id="repeat-password" type="password" placeholder="Reapeat your Password">
+                <i class="fa-sharp fa-solid fa-eye iconPassword" onclick="showRepeatPassword()" id="password-button-scnd"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-key icon"></i>
+                <input id="gkey" type="text" placeholder="GKEY">
+            </div>
+            <div>
+                <a style="color:black" href="">
+                    <span>Forgot Password?</span>
+                </a>
+            </div>
+            <div class="login-btn element-color" onclick="signup()">
+                <span class="text">Signup</span>
+            </div>     
+        </div>
+    </main>
+    <script>
+        if (window.sessionStorage.getItem("dark-mode") == "true") {
+            darkMode();
+        } else {
+            lightMode();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c2fe7ccc23.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header>
+        <nav id="navbar">
+            <a href="">LOGO</a>
+            <ul class="navList" style="  margin-right: 700px;">
+                <li><a href="Home.html">Home</a></li>
+                <li id="forworkers-a"><a href="ForWorkers.html">For Workers</a></li>
+                <li id="forbusiness-a"><a href="ForBusiness.html">For Business</a></li>
+            </ul>
+            <ul class="navList">
+                <li id="login-a"><a href="Login.html">Login</a></li>
+                <li id="signup-a"><a href="Signup.html">Sign up</a></li>
+                <li id="myaccount-a"><a href="MyAccount.html">My Account</a></li>
+                <li id="mycontent-a"><a href="MyContent.html">My Content</a></li>
+                <li id="logout-a"><span class="logout" onclick="logout()">Log out</span></li>
+
+            </ul>
+            <i class="fa-solid fa-sun dark-mode" onclick="toggleDarkMode()" id="dark-btn"></i>
+
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="title">
+            Frase aleatória aqui
+        </div>
+        <div class="subtitle">
+            Frase aleatória aqui
+        </div>
+        <input type="text" placeholder="Buscar aqui" style="margin-left: 100px;">
+    </main>
+    <script>
+        if (window.sessionStorage.getItem("autentification") == null){
+            window.sessionStorage.setItem("autentification", "false");
+        }
+
+        if (window.sessionStorage.getItem("autentification") == "true") {
+            document.getElementById("login-a").style.display = document.getElementById("signup-a").style.display = "none";
+            document.getElementById("forworkers-a").style.display = document.getElementById("myaccount-a").style.display = document.getElementById("mycontent-a").style.display = document.getElementById("logout-a").style.display = "display";
+
+        }
+        else if (window.sessionStorage.getItem("autentification") == "false"){
+            document.getElementById("login-a").style.display = document.getElementById("signup-a").style.display = "display";
+            
+            document.getElementById("forbusiness-a").style.display = document.getElementById("forworkers-a").style.display = "none";
+            document.getElementById("myaccount-a").style.display = document.getElementById("mycontent-a").style.display = document.getElementById("logout-a").style.display = "none";
+        } 
+
+        if(window.sessionStorage.getItem("dark-mode") == null){
+            window.sessionStorage.setItem("dark-mode", "true");
+        }
+
+
+
+        if(window.sessionStorage.getItem("dark-mode") == "true"){
+            darkMode();
+        } else {
+            lightMode();
+        }
+    </script>
+</body>
+
+</html>

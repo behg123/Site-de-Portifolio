@@ -1,0 +1,436 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.account-box {
+  position: relative;
+  margin-left: -290px;
+  width: 1350px;
+
+}
+
+.btn-toggle {
+  width: 60px;
+  height: 60px;
+  background-image: url("img/btn-toggle.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.btn-toggle:hover {
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.change-txt {
+  position: absolute;
+  left: 10px;
+  top: 33px;
+  font-size: 0px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-box {
+  width: 58%;
+  height: 98vh;
+  background-color: white;
+  position: absolute;
+  margin-left: 13%;
+  margin-top: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 27, 95);
+  transition: 0.2s;
+}
+
+main {
+  background: url("img/background-second.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 1000vh;
+}
+
+nav {
+  position: absolute;
+  background-color: rgb(0, 27, 95);
+  height: 100vh;
+  width: 11.5%;
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+  display: flex;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+}
+
+nav ul hr {
+  margin-top: 30px;
+  height: 2px;
+  background-color: white;
+  border-radius: 30px;
+  width: 180px;
+  margin-left: 6px;
+}
+
+
+
+input {
+  border-color: rgb(0, 27, 95);
+  border-radius: 10px;
+  width: 400px;
+  height: 50px;
+  margin-top: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(0, 27, 95);
+  padding: 5px 10px 5px 50px;
+  font-size: 16px;
+}
+
+
+
+
+.navList {
+  list-style: none;
+}
+
+.navList ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+
+.navList i {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+
+.text {
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-top: 34px;
+  margin-left: 20px;
+  display: inline-block;
+  position: absolute;
+
+}
+
+.text-scnd{
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-top: 18px;
+  margin-left: 130px;
+  display: inline-block;
+  position: relative;
+}
+
+.icon {
+  width: 20px;
+}
+
+main div div {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  margin-left: 300px;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 31.5% 31.5% 31.5%;
+}
+
+.grid-item {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-left: 250px;
+  font-size: 30px;
+  text-align: center;
+  height: 400px;
+  position: inherit;
+  transition: 0.2s;
+}
+
+.grid-container-business {
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+}
+
+.grid-item-business {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-left: 250px;
+  font-size: 30px;
+  text-align: center;
+  height: 400px;
+  width: 250px;
+  transition: 0.2s;
+
+}
+
+.grid-create {
+  background-color: rgb(255, 255, 255);
+  top: 108px;
+  left: -50px;
+  
+  font-size: 30px;
+  text-align: center;
+  height: 400px;
+  position: absolute;
+  transition: 0.2s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+
+
+.friend-list {
+  width: 27%;
+  height: 98vh;
+  background-color: white;
+  position: absolute;
+  margin-left: 72%;
+  margin-top: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 27, 95);
+}
+
+
+.message {
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  transition: width 0.2s;
+}
+
+.send-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 30px;
+  margin-right: 110px;
+  margin-bottom: 27px;
+}
+
+.send-icon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.message-header {
+  position: absolute;
+  margin-left: 0px;
+  height: 10%;
+  width: 100%;
+  background-color: rgb(0, 27, 95);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+
+}
+
+.username {
+  color: white;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  font-size: 36px;
+  margin-top: 25px;
+  display: inline-block;
+  position: absolute;
+}
+
+.avatar-img {
+  width: 70px;
+  padding: 10px;
+  font-size: 0px;
+}
+
+.avatar-img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.avatar-img:hover+.change-txt {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+
+main div input {
+  margin-left: 600px;
+  width: 500px;
+}
+
+main hr {
+  margin-top: 10px;
+  height: 2px;
+  background-color: white;
+  border-color: white;
+  width: 1460px;
+  margin-left: 250px;
+}
+
+.dark-mode {
+  color: white;
+  cursor: pointer;
+}
+
+.img-logo {
+  height: 280px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 8px;
+}
+
+.create {
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.create:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.img-portfolio {
+  height: 300px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 8px;
+}
+
+
+h5 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: relative;
+
+}
+
+.txt-dark {
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-top: 33px;
+  margin-left: 13px;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.friend-img {
+  height: 50px;
+  padding: 10px;
+}
+
+.friend {
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box;
+  margin-left: 0;
+  height: 70px;
+  width: 455px;
+}
+
+.friend-name {
+  font-size: large;
+  position: absolute;
+  margin-top: 25px;
+}
+
+.username-change {
+  position: absolute;
+  font-size: 30px;
+  top: 30px;
+}
+
+.hr-account {
+  position: absolute;
+  left: -240px;
+  top: 80px;
+  width: 1421px;
+  color: black;
+  background-color: black;
+}
+
+.change-box {
+  width: 86%;
+  height: 98vh;
+  background-color: white;
+  position: absolute;
+  margin-left: 13%;
+  margin-top: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 27, 95);
+  transition: 0.2s;
+}
+
+.line-top {
+  width: 1360px;
+}
+
+.new-portfolio-box{
+  margin-left: 5px;
+  width: 420px;
+  height: 30px;
+  margin-top: 10px;
+
+}
+
+.portifolio-create-btn{
+  height: 60px;
+  width: 485px;
+  position: relative;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+.portifolio-create-btn:hover{
+  cursor: pointer;
+  
+  opacity: 0.8;
+}
+
+.portifolio-item{
+  width: 500px;
+  height: 740px;
+  margin-top: 50px;
+  margin-left: 250px;
+  border-style: double;
+}
+
+.ma-txt{
+  font-size: 30px;
+  margin-left: 60px;
+  margin-top: 50px;
+}

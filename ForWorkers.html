@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="SideNav.css">
+    <script src="https://kit.fontawesome.com/c2fe7ccc23.js" crossorigin="anonymous"></script>
+    <title>For Workers</title>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header>
+        <nav id="navbar">
+            <ul class="navList">
+                <div onclick="toggleNavWorkers()" class="btn-toggle"></div>
+                <li><a href="Home.html">
+                        <i class="fa-solid fa-house-user icon"></i>
+                        <span class="text">Home</span>
+                    </a></li>
+
+                <li><a href="ForWorkers.html">
+                        <i class="fa-solid fa-briefcase icon"></i>
+                        <span class="text">For Workers</span>
+                    </a></li>
+                <li><a href="ForBusiness.html">
+                        <i class="fa-solid fa-building icon"></i>
+                        <span class="text">For Business</span>
+                    </a></li>
+                <hr id="line">
+
+                <li><a href="MyAccount.html">
+                        <i class="fa-solid fa-user icon" style="text-decoration:underline"></i>
+                        <span class="text">My account</span>
+                    </a></li>
+                <li><a href="MyContent.html">
+                        <i class="fa-solid fa-folder icon"></i>
+                        <span class="text">My content</span>
+                    </a></li>
+                <li><a href="chat.html">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="text">Chat</span>
+                    </a></li>
+                <hr id="line">
+
+                <li>
+                    <i class="fa-solid fa-sun dark-mode" onclick="toggleDarkMode()" id="dark-btn"></i>
+                    <span style="color:white" class="txt-dark text" id="txt-dark text" onclick="darkMode()">Dark
+                        Mode</span>
+
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div>
+            <a href="">LOGO</a>
+            <input type="text" placeholder="Buscar aqui" class="">
+
+        </div>
+        <hr class="line-top">
+        <div class="grid-container" id="grid">
+            <div class="grid-item">
+                <img class="img-logo" src="img/logo01.jpg" alt="business-img">
+                <h5>Empresa</h5>
+                <h6>Local</h6>
+            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </main>
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+        if (window.sessionStorage.getItem("dark-mode") == "true") {
+            darkMode();
+        } else {
+            lightMode();
+        }
+    </script>
+</body>

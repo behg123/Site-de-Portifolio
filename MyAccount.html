@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c2fe7ccc23.js" crossorigin="anonymous"></script>
+    <title>My account</title>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="loginRoute.js"></script>
+
+
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header>
+        <nav id="navbar">
+            <a href="">LOGO</a>
+            <ul class="navList" style="  margin-right: 300px;">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ForWorkers.html">For Workers</a></li>
+                <li><a href="ForBusiness.html">For Business</a></li>
+            </ul>
+            <ul class="navList">
+                <li><a href="ForWorkers.html">For Workers</a></li>
+                <li><a href="ForBusiness.html">For Business</a></li>
+                <li><a href="Chat.html">Chat</a></li>
+                <li><span style="text-decoration: underline; color: white;"> My Account</span></li>
+                <li><a href="MyContent.html">My content</a></li>
+
+            </ul>
+            <i class="fa-solid fa-sun dark-mode" onclick="toggleDarkMode()" id="dark-btn"></i>
+
+        </nav>
+    </header>
+
+    <main id="main">
+        <div id="chat-box" class="loginBox" style="height: 700px;">
+            <div>
+                <span class="credentials-txt">Change your credentials</span>
+                <input id="gkey" class="account-box" type="text" placeholder="Gkey" value="0" readonly>
+                <input id="name" class="account-box" type="text" placeholder="Name" value="Placeholder Username">
+                <input id="email" class="account-box" type="email" placeholder="Email"
+                    value="Placeholder.username@edu.univali.br">
+                <input id="password" type="password" placeholder="Password">
+                <i class="fa-sharp fa-solid fa-eye iconPassword" onclick="showPassword()" id="passwordButton"></i>
+                <div>
+                    <a style="color:black" href="">
+                        <span id="error-login" style="color:red; font-size: 12px;" value=""></span>
+                    </a>
+                </div>
+                <div id="change-btn" class="login-btn  element-color" onclick="update()">
+                    <span class="text" style="left:110px">Save changes</span>
+                </div>
+                <div id="change-btn" class="login-btn  element-color" style="margin-top: 200px;" onclick="deleteAccount()">
+                    <span class="text" style="left:110px">Delete account</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        setInitialCredentials();
+        if (window.sessionStorage.getItem("dark-mode") == "true") {
+            darkMode();
+        } else {
+            lightMode();
+        }
+        var input = document.getElementById("msg-box");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("change-btn").click();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
